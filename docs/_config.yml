@@ -1,0 +1,13 @@
+title: Grow Diary
+description: Grow Diary 法律文件與隱私權政策
+theme: jekyll-theme-cayman
+markdown: kramdown
+lang: zh-Hant
+
+# 僅發布隱私權政策，不公開內部開發文件
+exclude:
+  - ARCHITECTURE.md
+  - FEATURE_ROADMAP.md
+  - PREMIUM.md
+  - ROADMAP.md
+  - privacy/README.md

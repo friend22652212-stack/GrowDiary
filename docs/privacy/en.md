@@ -74,7 +74,7 @@ You may revoke permissions anytime in iOS Settings.
 
 ## 5. Subscriptions and Payments
 
-Premium (NT$ 690/year or NT$ 99/month with a 7-day free trial) is processed through the **Apple App Store**.  
+Premium (NT$ 690/year or NT$ 90/month with a 7-day free trial) is processed through the **Apple App Store**.  
 We do **not** collect or store payment card details; Apple handles payment information. See [Apple Media Services Terms](https://www.apple.com/legal/internet-services/itunes/).
 
 ---

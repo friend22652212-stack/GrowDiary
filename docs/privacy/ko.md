@@ -74,7 +74,7 @@ iOS 설정에서 언제든 권한을 철회할 수 있습니다.
 
 ## 5. 구독 및 결제
 
-Premium(연 NT$ 690 또는 월 NT$ 99, 7일 무료 체험)은 **Apple App Store**를 통해 처리됩니다.  
+Premium(연 NT$ 690 또는 월 NT$ 90, 7일 무료 체험)은 **Apple App Store**를 통해 처리됩니다.  
 당사는 카드 정보를 **수집·저장하지 않습니다**. [Apple 미디어 서비스 약관](https://www.apple.com/legal/internet-services/itunes/)을 참고하세요.
 
 ---

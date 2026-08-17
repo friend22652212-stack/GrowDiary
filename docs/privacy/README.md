@@ -4,11 +4,11 @@
 
 | 檔案 | 語言 | 公開 URL（部署後） |
 |------|------|-------------------|
-| [zh-Hant.md](zh-Hant.md) | 繁體中文 | `https://<username>.github.io/GrowDiary/privacy/zh-Hant.html` |
-| [en.md](en.md) | English | `https://<username>.github.io/GrowDiary/privacy/en.html` |
-| [ko.md](ko.md) | 한국어 | `https://<username>.github.io/GrowDiary/privacy/ko.html` |
+| [zh-Hant.md](zh-Hant.md) | 繁體中文 | `https://friend22652212-stack.github.io/GrowDiary/privacy/zh-Hant.html` |
+| [en.md](en.md) | English | `https://friend22652212-stack.github.io/GrowDiary/privacy/en.html` |
+| [ko.md](ko.md) | 한국어 | `https://friend22652212-stack.github.io/GrowDiary/privacy/ko.html` |
 
-首頁：`https://<username>.github.io/GrowDiary/`
+首頁：`https://friend22652212-stack.github.io/GrowDiary/`
 
 ## 一次性設定步驟
 

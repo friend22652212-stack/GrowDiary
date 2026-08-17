@@ -74,7 +74,7 @@ Grow Diary（以下簡稱「本 App」）由 HUA-CHIEN KAO（以下簡稱「我�
 
 ## 5. 訂閱與付款
 
-Premium 訂閱（年訂 NT$ 690，含 7 天免費試用）透過 **Apple App Store** 處理。  
+Premium 訂閱（年訂 NT$ 690 或月訂 NT$ 99，含 7 天免費試用）透過 **Apple App Store** 處理。  
 我們 **不會** 收集或儲存您的信用卡號碼或付款資訊；相關資料由 Apple 處理，詳見 [Apple 媒體服務條款](https://www.apple.com/legal/internet-services/itunes/)。
 
 ---

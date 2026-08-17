@@ -9,6 +9,8 @@ final class DiaryEntry {
     var date: Date
     var createdAt: Date
     var profile: Profile?
+    @Relationship(deleteRule: .nullify)
+    var tags: [DiaryTag]
     @Relationship(deleteRule: .cascade, inverse: \PhotoAttachment.entry)
     var photos: [PhotoAttachment]
 
@@ -24,7 +26,12 @@ final class DiaryEntry {
         self.date = date
         createdAt = Date()
         self.profile = profile
+        tags = []
         photos = []
+    }
+
+    var tagNames: String {
+        tags.map(\.name).joined(separator: " ")
     }
 
     var sortedPhotos: [PhotoAttachment] {

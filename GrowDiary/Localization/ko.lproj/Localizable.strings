@@ -1,0 +1,320 @@
+/* Tabs */
+"tab.profiles" = "프로필";
+"tab.timeline" = "타임라인";
+"tab.search" = "검색";
+"tab.settings" = "설정";
+
+/* Common */
+"common.cancel" = "취소";
+"common.save" = "저장";
+"common.ok" = "확인";
+"common.error.title" = "오류 발생";
+"common.add" = "추가";
+"common.edit" = "편집";
+"common.delete" = "삭제";
+"common.done" = "완료";
+"common.close" = "닫기";
+"common.optional" = "선택";
+"common.type" = "유형";
+"common.date" = "날짜";
+"common.notes" = "메모";
+"common.title" = "제목";
+"common.diary" = "일기";
+"common.milestone" = "마일스톤";
+"common.photos" = "사진";
+"common.tags" = "태그";
+"app.name" = "Grow Diary";
+
+/* Profile type */
+"profile.type.baby" = "아기";
+"profile.type.pet" = "반려동물";
+
+/* Age */
+"age.format.yearsAndMonths" = "%1$lld세 %2$lld개월";
+"age.format.years" = "%lld세";
+"age.format.monthsAndDays" = "%1$lld개월 %2$lld일";
+"age.format.months" = "%lld개월";
+"age.format.days" = "%lld일";
+
+/* Growth */
+"growth.type.height" = "키";
+"growth.type.weight" = "몸무게";
+"growth.type.headCircumference" = "머리둘레";
+"unit.cm" = "cm";
+"unit.kg" = "kg";
+"growth.picker.metricType" = "데이터 유형";
+"growth.empty.title" = "%@ 기록이 없습니다";
+"growth.empty.message" = "첫 기록을 추가하여 성장 변화를 추적하세요.";
+"growth.chart.title" = "%@ 추이";
+"growth.chart.axis.date" = "날짜";
+"growth.form.section.data" = "데이터";
+"growth.field.value" = "수치";
+"growth.title.addMetric" = "%@ 추가";
+
+/* Profiles */
+"profiles.empty.title" = "프로필이 없습니다";
+"profiles.empty.message" = "첫 아기 또는 반려동물 프로필을 만들고 성장 일기를 시작하세요.";
+"profiles.navigationTitle" = "성장 프로필";
+"profiles.accessibility.add" = "프로필 추가";
+"profiles.stats.diaryCount" = "일기 %lld개";
+"profiles.stats.milestoneProgress" = "마일스톤 %1$lld/%2$lld";
+"profile.form.section.basic" = "기본 정보";
+"profile.field.name" = "이름";
+"profile.field.birthDate" = "출생/입양일";
+"profile.form.section.avatar" = "프로필 사진";
+"profile.action.choosePhoto" = "사진 선택";
+"profile.field.notesPlaceholder" = "예: 품종, 별명 유래...";
+"profile.title.edit" = "프로필 편집";
+"profile.title.add" = "프로필 추가";
+"profile.tab.diary" = "일기";
+"profile.tab.growth" = "성장 데이터";
+"profile.tab.milestones" = "마일스톤";
+"profile.picker.tabs" = "탭";
+"profile.action.edit" = "프로필 편집";
+"profile.action.addDiary" = "일기 추가";
+"profile.action.exportPDF" = "PDF 내보내기";
+"profile.action.delete" = "프로필 삭제";
+"profile.delete.confirm.title" = "이 프로필을 삭제할까요?";
+"profile.delete.confirm.action" = "프로필 및 모든 데이터 삭제";
+"profile.delete.confirm.message" = "이 작업은 되돌릴 수 없습니다. 모든 일기, 사진, 기록이 삭제됩니다.";
+"profile.diary.empty.title" = "일기가 없습니다";
+"profile.diary.empty.message" = "첫 미소, 이가 난 날, 새로운 재주 등 소중한 순간을 기록하세요.";
+"profile.stats.pill" = "%1$@ %2$@";
+
+/* Diary */
+"diary.row.photoCount" = "사진 %lld장";
+"diary.form.section.content" = "일기 내용";
+"diary.field.contentPlaceholder" = "오늘 무슨 일이 있었나요?";
+"diary.action.addPhotos" = "사진 추가";
+"diary.title.edit" = "일기 편집";
+"diary.title.add" = "일기 추가";
+"diary.detail.navigationTitle" = "일기 상세";
+"diary.delete.confirm.title" = "이 일기를 삭제할까요?";
+
+/* Timeline */
+"timeline.empty.title" = "타임라인이 비어 있습니다";
+"timeline.empty.message" = "모든 아기와 반려동물 일기가 시간순으로 표시됩니다.";
+"timeline.navigationTitle" = "타임라인";
+
+/* Search */
+"search.empty.initial.title" = "일기 검색";
+"search.empty.noResults.title" = "결과 없음";
+"search.empty.initial.message" = "키워드를 입력하거나 태그를 선택하여 일기를 필터링하세요.";
+"search.empty.noResults.message" = "다른 키워드나 태그를 시도해 보세요.";
+"search.navigationTitle" = "검색";
+"search.prompt" = "제목, 내용, 프로필 이름…";
+"search.tag.all" = "모든 태그";
+"search.tag.filter" = "태그";
+
+/* Tags */
+"tag.section.title" = "태그";
+"tag.field.placeholder" = "새 태그";
+"tag.action.add" = "추가";
+
+/* Photo */
+"photo.viewer.notFound.title" = "사진을 찾을 수 없음";
+"photo.viewer.notFound.message" = "이 사진이 삭제되었을 수 있습니다.";
+"photo.viewer.defaultTitle" = "사진";
+
+/* Milestones */
+"milestone.loading" = "마일스톤 불러오는 중…";
+"milestone.empty.title" = "마일스톤이 없습니다";
+"milestone.empty.message" = "기억에 남는 성장 순간을 추가하세요.";
+"milestone.section.pending" = "진행 중";
+"milestone.section.completed" = "달성함";
+"milestone.form.section.title" = "마일스톤";
+"milestone.field.completed" = "달성함";
+"milestone.field.setDate" = "날짜 설정";
+"milestone.field.achievedDate" = "달성 날짜";
+"milestone.action.delete" = "마일스톤 삭제";
+"milestone.title.edit" = "마일스톤 편집";
+"milestone.title.add" = "마일스톤 추가";
+"milestone.template.baby.smile" = "첫 미소";
+"milestone.template.baby.roll" = "첫 뒤집기";
+"milestone.template.baby.sit" = "첫 앉기";
+"milestone.template.baby.tooth" = "첫 치아";
+"milestone.template.baby.crawl" = "첫 기어가기";
+"milestone.template.baby.stand" = "첫 서기";
+"milestone.template.baby.walk" = "첫 걸음";
+"milestone.template.baby.firstWord" = "첫 말 (엄마/아빠)";
+"milestone.template.baby.solidFood" = "첫 이유식";
+"milestone.template.baby.sleepThrough" = "첫 밤새 수면";
+"milestone.template.pet.home" = "첫 입양일";
+"milestone.template.pet.bath" = "첫 목욕";
+"milestone.template.pet.vaccine" = "예방접종 완료";
+"milestone.template.pet.walk" = "첫 산책";
+"milestone.template.pet.trick" = "새 재주 배움";
+"milestone.template.pet.friend" = "첫 친구";
+"milestone.template.pet.groom" = "첫 미용";
+
+/* Settings */
+"settings.navigationTitle" = "설정";
+"settings.section.language" = "언어";
+"settings.language.footer" = "언어를 변경하면 인터페이스가 즉시 업데이트됩니다.";
+"settings.section.widget" = "홈 화면 위젯";
+"settings.widget.toggle" = "Widget 사용";
+"settings.widget.footer" = "앱이 홈 화면에 위젯을 자동으로 추가할 수 없습니다. 제거 후에는 직접 다시 추가해야 합니다. 끄면 기존 위젯에 성장 데이터가 표시되지 않습니다.";
+"settings.widget.status.enabled" = "Widget 사용 중 — 데이터 자동 업데이트";
+"settings.widget.status.disabled" = "Widget 꺼짐";
+"settings.widget.addSteps.title" = "홈 화면에 추가하기:";
+"settings.widget.addSteps.body" = "1. 홈 화면 빈 곳을 길게 누르기\n2. 「위젯 추가」 선택\n3. 「Grow Diary」 검색\n4. 크기 선택 후 추가";
+"settings.widget.guideAlert.title" = "위젯을 직접 추가해 주세요";
+"settings.widget.guideAlert.message" = "iOS는 앱이 홈 화면에 위젯을 자동 배치하는 것을 허용하지 않습니다. 홈 화면 길게 누르기 → 위젯 추가 → Grow Diary 검색.";
+"settings.section.export" = "데이터 및 내보내기";
+"settings.export.noProfiles" = "내보낼 프로필이 없습니다";
+"settings.export.profilePDF" = "\"%@\" 일기 PDF 내보내기";
+"settings.sync.notSignedIn" = "iCloud에 로그인되지 않음";
+"settings.sync.toggle" = "iCloud 동기화";
+"settings.section.sync" = "동기화";
+"settings.sync.footer" = "활성화하면 일기, 성장 데이터, 사진이 개인 iCloud에 동기화됩니다. 설정 변경 후 앱을 다시 시작하세요.";
+"settings.section.about" = "Grow Diary 정보";
+"settings.about.version" = "버전";
+"settings.about.versionValue" = "1.0.0";
+"settings.about.stage" = "개발 단계";
+"settings.about.stageValue" = "전체 아키텍처";
+"settings.section.features" = "기능 개요";
+"settings.features.footer" = "항목을 탭하면 해당 기능으로 이동합니다.";
+"settings.feature.diary" = "성장 일기 및 사진";
+"settings.feature.growth" = "성장 데이터";
+"settings.feature.growth.emptyMessage" = "키, 몸무게, 머리둘레를 기록하려면 먼저 프로필을 만드세요.";
+"settings.feature.growth.link" = "키/몸무게/머리둘레 기록";
+"settings.feature.milestones" = "성장 마일스톤";
+"settings.feature.milestones.emptyMessage" = "마일스톤을 보려면 먼저 프로필을 만드세요.";
+"settings.feature.search" = "태그 및 검색";
+"settings.feature.exportPDF" = "PDF 내보내기";
+"settings.section.privacy" = "개인정보";
+"settings.privacy.icloudEnabled" = "iCloud 동기화 시 일기와 성장 데이터는 개인 iCloud 계정에 저장되며 본인만 접근할 수 있습니다.";
+"settings.privacy.icloudDisabled" = "iCloud 동기화를 끄면 모든 일기, 사진, 성장 데이터는 이 기기에만 저장됩니다.";
+"settings.restartAlert.title" = "앱 재시작 필요";
+"settings.restartAlert.message" = "iCloud 동기화 설정이 저장되었습니다. Grow Diary를 완전히 종료한 후 다시 열어주세요.";
+
+/* Export */
+"export.empty.title" = "내보낼 항목 없음";
+"export.empty.message" = "프로필을 만들고 일기를 작성한 후 내보내세요.";
+"export.profile.diaryCount" = "일기 %lld개";
+"export.navigationTitle" = "PDF 내보내기";
+"export.pdf.coverTitle" = "%@의 성장 일기";
+"export.pdf.tagsLine" = "태그: %@";
+"export.pdf.noEntries" = "일기 기록이 없습니다.";
+"export.pdf.filename" = "%@-성장일기.pdf";
+
+/* Sync */
+"sync.status.disabled" = "꺼짐";
+"sync.status.notSignedIn" = "설정 앱에서 iCloud에 로그인하세요";
+"sync.status.enabled" = "켜짐 — 개인 iCloud에 동기화 중";
+
+/* Errors */
+"error.photo.encodingFailed" = "사진을 저장할 수 없습니다. 다시 시도해 주세요.";
+"error.photo.cloudUnavailable" = "iCloud를 사용할 수 없습니다. iCloud에 로그인했는지 확인하세요.";
+
+/* Widget */
+"widget.config.displayName" = "성장 일기";
+"widget.config.description" = "프로필 나이와 최신 사진을 표시합니다.";
+"widget.noDiary.message" = "일기가 없습니다. 기록을 시작하세요!";
+"widget.empty.title" = "프로필 없음";
+"widget.empty.message" = "앱을 열고 아기 또는 반려동물 프로필을 만드세요.";
+"widget.disabled.title" = "Widget 꺼짐";
+"widget.disabled.message" = "Grow Diary 설정에서 Widget을 켜주세요.";
+"widget.intent.entityType" = "프로필";
+"widget.intent.title" = "프로필 선택";
+"widget.intent.description" = "위젯에 표시할 아기 또는 반려동물 프로필을 선택하세요.";
+"widget.intent.parameter.profile" = "프로필";
+
+/* Permissions */
+"permission.camera" = "Grow Diary는 성장 사진 촬영을 위해 카메라 접근 권한이 필요합니다.";
+"permission.photoLibrary" = "Grow Diary는 일기에 사진을 추가하기 위해 사진 보관함 접근 권한이 필요합니다.";
+"permission.faceID" = "Grow Diary는 Face ID로 일기와 사진을 보호합니다.";
+
+/* Security */
+"settings.section.security" = "보안";
+"settings.applock.toggle" = "앱 잠금";
+"settings.applock.unavailable" = "Face ID, Touch ID 또는 기기 암호가 설정되어 있지 않습니다.";
+"settings.applock.faceID" = "Face ID로 잠금 해제";
+"settings.applock.touchID" = "Touch ID로 잠금 해제";
+"settings.applock.passcode" = "기기 암호로 잠금 해제";
+"settings.applock.footer" = "백그라운드에서 돌아올 때 인증이 필요합니다.";
+"applock.title" = "Grow Diary 잠김";
+"applock.subtitle" = "계속하려면 인증하세요";
+"applock.reason" = "성장 일기를 보려면 잠금을 해제하세요";
+"applock.action.faceID" = "Face ID로 잠금 해제";
+"applock.action.touchID" = "Touch ID로 잠금 해제";
+"applock.action.passcode" = "암호로 잠금 해제";
+"applock.action.cancel" = "취소";
+
+/* Notifications */
+"settings.section.notification" = "알림";
+"settings.notification.diary.toggle" = "일기 알림";
+"settings.notification.diary.time" = "알림 시간";
+"settings.notification.growth.toggle" = "성장 기록 알림";
+"settings.notification.growth.weekday" = "요일";
+"settings.notification.growth.time" = "알림 시간";
+"settings.notification.denied" = "설정 앱에서 Grow Diary 알림을 허용해 주세요.";
+"settings.notification.footer" = "알림은 기기에만 예약되며 서버로 전송되지 않습니다.";
+"notification.diary.title" = "오늘 일기를 써볼까요?";
+"notification.diary.body" = "오늘의 소중한 순간을 기록해 보세요.";
+"notification.growth.title" = "성장 데이터를 기록할 시간";
+"notification.growth.body" = "키, 몸무게 등 성장 기록을 업데이트하세요.";
+
+/* Backup */
+"settings.section.backup" = "백업 및 복원";
+"settings.backup.export" = "전체 백업 내보내기";
+"settings.backup.import" = "백업에서 복원";
+"settings.backup.footer" = "모든 프로필, 일기, 사진, 성장 데이터가 포함됩니다.";
+"backup.error.invalidArchive" = "백업 파일을 읽을 수 없습니다.";
+"backup.error.unsupportedArchive" = "지원하지 않는 압축 형식입니다.";
+"backup.error.unsupportedVersion" = "백업 버전이 너무 높습니다. 앱을 업데이트하세요.";
+"backup.error.importFailed" = "선택한 파일을 열 수 없습니다.";
+"backup.import.mode.title" = "복원 방식";
+"backup.import.mode.message" = "병합은 기존 데이터를 유지하고 새 항목을 추가합니다. 교체는 모든 데이터를 삭제한 후 복원합니다.";
+"backup.import.mode.merge" = "병합";
+"backup.import.mode.replace" = "전체 교체";
+"backup.import.result.title" = "복원 완료";
+"backup.import.result.empty" = "가져올 새 데이터가 없습니다.";
+"backup.import.result.success" = "프로필 %lld개, 일기 %lld개, 사진 %lld장을 가져왔습니다.";
+
+/* Spotlight */
+"settings.section.spotlight" = "Spotlight 검색";
+"settings.spotlight.toggle" = "Spotlight에 추가";
+"settings.spotlight.footer" = "홈 화면에서 일기와 프로필을 검색할 수 있습니다.";
+"spotlight.keyword.profile" = "프로필";
+
+/* Premium */
+"premium.section.title" = "Premium";
+"premium.upgrade" = "Premium 업그레이드";
+"premium.status.active" = "Premium 사용 중";
+"premium.settings.footer" = "연 NT$ 690 또는 월 NT$ 90, 7일 무료 체험.";
+"premium.paywall.title" = "Grow Diary Premium";
+"premium.paywall.headline" = "모든 성장 순간을 온전히 보관";
+"premium.paywall.subheadline" = "무제한 프로필, iCloud 동기화, 백업 등을 이용하세요.";
+"premium.paywall.plan.annual" = "연간";
+"premium.paywall.plan.monthly" = "월간";
+"premium.paywall.perYear" = "/년";
+"premium.paywall.perMonth" = "/월";
+"premium.paywall.bestValue" = "가장 저렴";
+"premium.paywall.savePercent" = "연간 구독 %lld%% 절약";
+"premium.paywall.trialBadge" = "7일 무료 체험";
+"premium.paywall.startTrial" = "7일 무료 체험 시작";
+"premium.paywall.subscribe" = "Premium 구독";
+"premium.paywall.restore" = "구매 복원";
+"premium.paywall.legal" = "체험 기간 종료 후 선택한 요금제로 자동 갱신됩니다. 갱신 최소 24시간 전에 App Store에서 취소할 수 있습니다.";
+"premium.feature.profiles.title" = "무제한 프로필";
+"premium.feature.profiles.subtitle" = "여러 아기 또는 반려동물 기록";
+"premium.feature.icloud.title" = "iCloud 동기화";
+"premium.feature.icloud.subtitle" = "여러 기기에서 자동 동기화";
+"premium.feature.backup.title" = "백업 및 복원";
+"premium.feature.backup.subtitle" = "기기 변경도 안심";
+"premium.feature.pdf.title" = "PDF 내보내기";
+"premium.feature.pdf.subtitle" = "아름다운 성장 일기 공유";
+"premium.feature.security.title" = "Face ID 잠금";
+"premium.feature.security.subtitle" = "소중한 추억 보호";
+"premium.feature.spotlight.title" = "Spotlight 검색";
+"premium.feature.spotlight.subtitle" = "홈 화면에서 일기 검색";
+"premium.error.productUnavailable" = "구독 상품을 불러올 수 없습니다. 잠시 후 다시 시도해 주세요.";
+"premium.error.pending" = "구매가 처리 중입니다. 잠시 후 확인해 주세요.";
+"premium.error.noSubscription" = "유효한 Premium 구독을 찾을 수 없습니다.";
+"premium.diary.lockedBanner.title" = "30일 이전 일기 %lld개";
+"premium.diary.lockedBanner.subtitle" = "Premium으로 전체 기록 보기";
+"premium.diary.lockedDetail.title" = "Premium 필요";
+"premium.diary.lockedDetail.message" = "무료 버전은 최근 30일 일기만 볼 수 있습니다. 데이터는 안전하게 보관되며, 업그레이드하면 전체를 열람할 수 있습니다.";
+"premium.feature.diaryHistory.title" = "전체 일기 기록";
+"premium.feature.diaryHistory.subtitle" = "30일 이전 일기 모두 보기";

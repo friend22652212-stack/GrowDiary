@@ -4,6 +4,7 @@ import SwiftUI
 struct DiaryEntryDetailView: View {
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
+    @EnvironmentObject private var subscriptionManager: SubscriptionManager
 
     @Bindable var entry: DiaryEntry
 
@@ -11,7 +12,25 @@ struct DiaryEntryDetailView: View {
     @State private var selectedPhoto: PhotoAttachment?
     @State private var showingDeleteConfirmation = false
 
+    private var isAccessible: Bool {
+        PremiumAccess.isDiaryEntryAccessible(entry, isPremium: subscriptionManager.isPremium)
+    }
+
     var body: some View {
+        Group {
+            if isAccessible {
+                entryContent
+            } else {
+                DiaryHistoryLockedView {
+                    subscriptionManager.showingPaywall = true
+                }
+                .navigationTitle(entry.title)
+                .navigationBarTitleDisplayMode(.inline)
+            }
+        }
+    }
+
+    private var entryContent: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
                 VStack(alignment: .leading, spacing: 8) {
@@ -35,25 +54,29 @@ struct DiaryEntryDetailView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
 
-                if !entry.sortedPhotos.isEmpty {
-                    VStack(alignment: .leading, spacing: 10) {
-                        Text("照片")
-                            .font(.headline)
-                        PhotoGridView(photos: entry.sortedPhotos) { photo in
-                            selectedPhoto = photo
+                if !entry.tags.isEmpty {
+                    HStack(spacing: 8) {
+                        ForEach(entry.tags) { tag in
+                            TagChipView(tag: tag)
                         }
+                    }
+                }
+
+                if !entry.photos.isEmpty {
+                    PhotoGridView(photos: entry.sortedPhotos) { photo in
+                        selectedPhoto = photo
                     }
                 }
             }
             .padding()
         }
-        .navigationTitle("日記詳情")
+        .navigationTitle(entry.title)
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 Menu {
-                    Button("編輯") { showingEditEntry = true }
-                    Button("刪除", role: .destructive) {
+                    Button(L10n.string("common.edit")) { showingEditEntry = true }
+                    Button(L10n.string("common.delete"), role: .destructive) {
                         showingDeleteConfirmation = true
                     }
                 } label: {
@@ -70,19 +93,20 @@ struct DiaryEntryDetailView: View {
             PhotoViewerSheet(photo: photo)
         }
         .confirmationDialog(
-            "確定要刪除這則日記嗎？",
+            L10n.string("diary.delete.confirm.title"),
             isPresented: $showingDeleteConfirmation,
             titleVisibility: .visible
         ) {
-            Button("刪除", role: .destructive) {
+            Button(L10n.string("common.delete"), role: .destructive) {
                 deleteEntry()
                 dismiss()
             }
-            Button("取消", role: .cancel) {}
+            Button(L10n.string("common.cancel"), role: .cancel) {}
         }
     }
 
     private func deleteEntry() {
+        SpotlightIndexingService.removeEntry(entry)
         for photo in entry.photos {
             PhotoStorageService.deleteImage(fileName: photo.fileName)
         }
@@ -90,4 +114,4 @@ struct DiaryEntryDetailView: View {
     }
 }
 
-extension PhotoAttachment: @retroactive Identifiable {}
+extension PhotoAttachment: Identifiable {}

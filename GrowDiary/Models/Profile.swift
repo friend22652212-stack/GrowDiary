@@ -12,6 +12,10 @@ final class Profile {
     var createdAt: Date
     @Relationship(deleteRule: .cascade, inverse: \DiaryEntry.profile)
     var entries: [DiaryEntry]
+    @Relationship(deleteRule: .cascade, inverse: \GrowthMetric.profile)
+    var growthMetrics: [GrowthMetric]
+    @Relationship(deleteRule: .cascade, inverse: \Milestone.profile)
+    var milestones: [Milestone]
 
     init(
         name: String,
@@ -28,6 +32,8 @@ final class Profile {
         self.avatarPhotoPath = avatarPhotoPath
         createdAt = Date()
         entries = []
+        growthMetrics = []
+        milestones = []
     }
 
     var type: ProfileType {
@@ -37,6 +43,23 @@ final class Profile {
 
     var sortedEntries: [DiaryEntry] {
         entries.sorted { $0.date > $1.date }
+    }
+
+    var sortedGrowthMetrics: [GrowthMetric] {
+        growthMetrics.sorted { $0.date > $1.date }
+    }
+
+    var sortedMilestones: [Milestone] {
+        milestones.sorted { lhs, rhs in
+            if lhs.isCompleted != rhs.isCompleted {
+                return !lhs.isCompleted
+            }
+            return lhs.sortOrder < rhs.sortOrder
+        }
+    }
+
+    var completedMilestoneCount: Int {
+        milestones.filter(\.isCompleted).count
     }
 
     var ageDescription: String {
@@ -58,18 +81,18 @@ enum AgeFormatter {
 
         if years > 0 {
             if months > 0 {
-                return "\(years) 歲 \(months) 個月"
+                return L10n.format("age.format.yearsAndMonths", years, months)
             }
-            return "\(years) 歲"
+            return L10n.format("age.format.years", years)
         }
 
         if months > 0 {
             if days > 0 {
-                return "\(months) 個月 \(days) 天"
+                return L10n.format("age.format.monthsAndDays", months, days)
             }
-            return "\(months) 個月"
+            return L10n.format("age.format.months", months)
         }
 
-        return "\(max(days, 0)) 天"
+        return L10n.format("age.format.days", max(days, 0))
     }
 }

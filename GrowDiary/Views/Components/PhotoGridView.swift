@@ -59,16 +59,16 @@ struct PhotoViewerSheet: View {
                 } else {
                     EmptyStateView(
                         systemImage: "photo",
-                        title: "找不到照片",
-                        message: "這張照片可能已被移除。"
+                        title: L10n.string("photo.viewer.notFound.title"),
+                        message: L10n.string("photo.viewer.notFound.message")
                     )
                 }
             }
-            .navigationTitle(photo.caption.isEmpty ? "照片" : photo.caption)
+            .navigationTitle(photo.caption.isEmpty ? L10n.string("photo.viewer.defaultTitle") : photo.caption)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
-                    Button("完成") { dismiss() }
+                    Button(L10n.string("common.done")) { dismiss() }
                 }
             }
         }

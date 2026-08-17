@@ -1,0 +1,320 @@
+/* Tabs */
+"tab.profiles" = "檔案";
+"tab.timeline" = "時間軸";
+"tab.search" = "搜尋";
+"tab.settings" = "設定";
+
+/* Common */
+"common.cancel" = "取消";
+"common.save" = "儲存";
+"common.ok" = "好";
+"common.error.title" = "發生錯誤";
+"common.add" = "新增";
+"common.edit" = "編輯";
+"common.delete" = "刪除";
+"common.done" = "完成";
+"common.close" = "關閉";
+"common.optional" = "選填";
+"common.type" = "類型";
+"common.date" = "日期";
+"common.notes" = "備註";
+"common.title" = "標題";
+"common.diary" = "日記";
+"common.milestone" = "里程碑";
+"common.photos" = "照片";
+"common.tags" = "標籤";
+"app.name" = "Grow Diary";
+
+/* Profile type */
+"profile.type.baby" = "寶寶";
+"profile.type.pet" = "寵物";
+
+/* Age */
+"age.format.yearsAndMonths" = "%1$lld 歲 %2$lld 個月";
+"age.format.years" = "%lld 歲";
+"age.format.monthsAndDays" = "%1$lld 個月 %2$lld 天";
+"age.format.months" = "%lld 個月";
+"age.format.days" = "%lld 天";
+
+/* Growth */
+"growth.type.height" = "身高";
+"growth.type.weight" = "體重";
+"growth.type.headCircumference" = "頭圍";
+"unit.cm" = "cm";
+"unit.kg" = "kg";
+"growth.picker.metricType" = "數據類型";
+"growth.empty.title" = "還沒有%@紀錄";
+"growth.empty.message" = "新增第一筆數據，追蹤成長變化。";
+"growth.chart.title" = "%@趨勢";
+"growth.chart.axis.date" = "日期";
+"growth.form.section.data" = "數據";
+"growth.field.value" = "數值";
+"growth.title.addMetric" = "新增%@";
+
+/* Profiles */
+"profiles.empty.title" = "還沒有檔案";
+"profiles.empty.message" = "建立第一個寶寶或寵物檔案，開始記錄成長日記。";
+"profiles.navigationTitle" = "成長檔案";
+"profiles.accessibility.add" = "新增檔案";
+"profiles.stats.diaryCount" = "%lld 日記";
+"profiles.stats.milestoneProgress" = "%1$lld/%2$lld 里程碑";
+"profile.form.section.basic" = "基本資料";
+"profile.field.name" = "名稱";
+"profile.field.birthDate" = "出生／到家日期";
+"profile.form.section.avatar" = "大頭照";
+"profile.action.choosePhoto" = "選擇照片";
+"profile.field.notesPlaceholder" = "例如：品種、暱稱由來...";
+"profile.title.edit" = "編輯檔案";
+"profile.title.add" = "新增檔案";
+"profile.tab.diary" = "日記";
+"profile.tab.growth" = "成長數據";
+"profile.tab.milestones" = "里程碑";
+"profile.picker.tabs" = "分頁";
+"profile.action.edit" = "編輯檔案";
+"profile.action.addDiary" = "新增日記";
+"profile.action.exportPDF" = "匯出 PDF";
+"profile.action.delete" = "刪除檔案";
+"profile.delete.confirm.title" = "確定要刪除這個檔案嗎？";
+"profile.delete.confirm.action" = "刪除檔案與所有資料";
+"profile.delete.confirm.message" = "此動作無法復原，所有日記、照片與紀錄都會被刪除。";
+"profile.diary.empty.title" = "還沒有日記";
+"profile.diary.empty.message" = "記錄第一次微笑、長牙、學會新把戲，或任何值得留念的時刻。";
+"profile.stats.pill" = "%1$@ %2$@";
+
+/* Diary */
+"diary.row.photoCount" = "%lld 張照片";
+"diary.form.section.content" = "日記內容";
+"diary.field.contentPlaceholder" = "今天發生了什麼？";
+"diary.action.addPhotos" = "加入照片";
+"diary.title.edit" = "編輯日記";
+"diary.title.add" = "新增日記";
+"diary.detail.navigationTitle" = "日記詳情";
+"diary.delete.confirm.title" = "確定要刪除這則日記嗎？";
+
+/* Timeline */
+"timeline.empty.title" = "時間軸還是空的";
+"timeline.empty.message" = "所有寶寶與寵物的日記會依時間排序顯示在這裡。";
+"timeline.navigationTitle" = "時間軸";
+
+/* Search */
+"search.empty.initial.title" = "搜尋日記";
+"search.empty.noResults.title" = "找不到結果";
+"search.empty.initial.message" = "輸入關鍵字或選擇標籤來篩選日記。";
+"search.empty.noResults.message" = "試試其他關鍵字或標籤。";
+"search.navigationTitle" = "搜尋";
+"search.prompt" = "標題、內容、檔案名稱…";
+"search.tag.all" = "全部標籤";
+"search.tag.filter" = "標籤";
+
+/* Tags */
+"tag.section.title" = "標籤";
+"tag.field.placeholder" = "新增標籤";
+"tag.action.add" = "加入";
+
+/* Photo */
+"photo.viewer.notFound.title" = "找不到照片";
+"photo.viewer.notFound.message" = "這張照片可能已被移除。";
+"photo.viewer.defaultTitle" = "照片";
+
+/* Milestones */
+"milestone.loading" = "載入里程碑…";
+"milestone.empty.title" = "還沒有里程碑";
+"milestone.empty.message" = "新增值得紀念的成長時刻。";
+"milestone.section.pending" = "待達成";
+"milestone.section.completed" = "已達成";
+"milestone.form.section.title" = "里程碑";
+"milestone.field.completed" = "已達成";
+"milestone.field.setDate" = "設定日期";
+"milestone.field.achievedDate" = "達成日期";
+"milestone.action.delete" = "刪除里程碑";
+"milestone.title.edit" = "編輯里程碑";
+"milestone.title.add" = "新增里程碑";
+"milestone.template.baby.smile" = "第一次微笑";
+"milestone.template.baby.roll" = "第一次翻身";
+"milestone.template.baby.sit" = "第一次坐起";
+"milestone.template.baby.tooth" = "長出第一顆牙";
+"milestone.template.baby.crawl" = "第一次爬行";
+"milestone.template.baby.stand" = "第一次站立";
+"milestone.template.baby.walk" = "第一次走路";
+"milestone.template.baby.firstWord" = "第一次叫爸爸／媽媽";
+"milestone.template.baby.solidFood" = "第一次吃副食品";
+"milestone.template.baby.sleepThrough" = "第一次睡過夜";
+"milestone.template.pet.home" = "第一次到家";
+"milestone.template.pet.bath" = "第一次洗澡";
+"milestone.template.pet.vaccine" = "完成疫苗";
+"milestone.template.pet.walk" = "第一次散步";
+"milestone.template.pet.trick" = "學會新把戲";
+"milestone.template.pet.friend" = "第一次交朋友";
+"milestone.template.pet.groom" = "第一次美容";
+
+/* Settings */
+"settings.navigationTitle" = "設定";
+"settings.section.language" = "語言";
+"settings.language.footer" = "切換語言後，介面會立即更新。";
+"settings.section.widget" = "桌面小工具";
+"settings.widget.toggle" = "啟用 Widget";
+"settings.widget.footer" = "App 無法自動把 Widget 加回主畫面。移除後需手動重新加入。關閉時，已存在的 Widget 將不再顯示成長資料。";
+"settings.widget.status.enabled" = "Widget 已啟用，資料會自動更新";
+"settings.widget.status.disabled" = "Widget 已關閉";
+"settings.widget.addSteps.title" = "如何加入主畫面：";
+"settings.widget.addSteps.body" = "1. 長按主畫面空白處\n2. 點「加入 Widget」\n3. 搜尋「Grow Diary」\n4. 選尺寸後加入";
+"settings.widget.guideAlert.title" = "請手動加入 Widget";
+"settings.widget.guideAlert.message" = "iOS 不允許 App 自動把 Widget 放到主畫面。請長按主畫面 → 加入 Widget → 搜尋 Grow Diary。";
+"settings.section.export" = "資料與匯出";
+"settings.export.noProfiles" = "尚無檔案可匯出";
+"settings.export.profilePDF" = "匯出「%@」日記 PDF";
+"settings.sync.notSignedIn" = "尚未登入 iCloud";
+"settings.sync.toggle" = "iCloud 同步";
+"settings.section.sync" = "同步";
+"settings.sync.footer" = "開啟後，日記、成長數據與照片會同步至您的私人 iCloud，可在 iPhone、iPad 間共用。變更設定後請重新啟動 App。";
+"settings.section.about" = "關於 Grow Diary";
+"settings.about.version" = "版本";
+"settings.about.versionValue" = "1.0.0";
+"settings.about.stage" = "開發階段";
+"settings.about.stageValue" = "完整架構版";
+"settings.section.features" = "功能概覽";
+"settings.features.footer" = "點選項目即可前往對應功能。";
+"settings.feature.diary" = "成長日記與照片";
+"settings.feature.growth" = "成長數據";
+"settings.feature.growth.emptyMessage" = "請先建立檔案，才能記錄身高、體重或頭圍。";
+"settings.feature.growth.link" = "身高／體重／頭圍紀錄";
+"settings.feature.milestones" = "成長里程碑";
+"settings.feature.milestones.emptyMessage" = "請先建立檔案，才能查看與管理里程碑。";
+"settings.feature.search" = "標籤與搜尋";
+"settings.feature.exportPDF" = "PDF 匯出";
+"settings.section.privacy" = "隱私";
+"settings.privacy.icloudEnabled" = "啟用 iCloud 同步時，日記與成長數據會儲存在您的私人 iCloud 帳號，僅您本人可存取，不會上傳到第三方伺服器。";
+"settings.privacy.icloudDisabled" = "關閉 iCloud 同步時，所有日記、照片與成長數據僅儲存在您的裝置本機。";
+"settings.restartAlert.title" = "需要重新啟動 App";
+"settings.restartAlert.message" = "iCloud 同步設定已儲存，請完全關閉 Grow Diary 後重新開啟才會生效。";
+
+/* Export */
+"export.empty.title" = "尚無檔案可匯出";
+"export.empty.message" = "請先到「檔案」建立寶寶或寵物檔案，並撰寫日記後再匯出。";
+"export.profile.diaryCount" = "%lld 則日記";
+"export.navigationTitle" = "PDF 匯出";
+"export.pdf.coverTitle" = "%@ 的成長日記";
+"export.pdf.tagsLine" = "標籤：%@";
+"export.pdf.noEntries" = "尚無日記紀錄。";
+"export.pdf.filename" = "%@-成長日記.pdf";
+
+/* Sync */
+"sync.status.disabled" = "已關閉";
+"sync.status.notSignedIn" = "請在「設定」App 登入 iCloud";
+"sync.status.enabled" = "已啟用，資料同步至您的私人 iCloud";
+
+/* Errors */
+"error.photo.encodingFailed" = "無法儲存照片，請再試一次。";
+"error.photo.cloudUnavailable" = "iCloud 目前無法使用，請確認已登入 iCloud。";
+
+/* Widget */
+"widget.config.displayName" = "成長日記";
+"widget.config.description" = "顯示檔案年齡與最新照片。";
+"widget.noDiary.message" = "還沒有日記，快來記錄吧";
+"widget.empty.title" = "尚無檔案";
+"widget.empty.message" = "請先開啟 App 建立寶寶或寵物檔案。";
+"widget.disabled.title" = "Widget 已關閉";
+"widget.disabled.message" = "請在 Grow Diary 設定中開啟 Widget。";
+"widget.intent.entityType" = "檔案";
+"widget.intent.title" = "選擇檔案";
+"widget.intent.description" = "選擇要在桌面小工具顯示的寶寶或寵物檔案。";
+"widget.intent.parameter.profile" = "檔案";
+
+/* Permissions */
+"permission.camera" = "Grow Diary 需要相機權限，以便您直接拍攝成長照片。";
+"permission.photoLibrary" = "Grow Diary 需要相簿權限，以便您為日記加入成長照片。";
+"permission.faceID" = "Grow Diary 使用 Face ID 保護您的成長日記與照片。";
+
+/* Security */
+"settings.section.security" = "安全";
+"settings.applock.toggle" = "App 鎖定";
+"settings.applock.unavailable" = "此裝置未設定 Face ID、Touch ID 或密碼。";
+"settings.applock.faceID" = "使用 Face ID 解鎖";
+"settings.applock.touchID" = "使用 Touch ID 解鎖";
+"settings.applock.passcode" = "使用裝置密碼解鎖";
+"settings.applock.footer" = "切換 App 或從背景返回時，需要驗證才能查看內容。";
+"applock.title" = "Grow Diary 已鎖定";
+"applock.subtitle" = "請驗證身分以繼續";
+"applock.reason" = "解鎖以查看您的成長日記";
+"applock.action.faceID" = "使用 Face ID 解鎖";
+"applock.action.touchID" = "使用 Touch ID 解鎖";
+"applock.action.passcode" = "使用密碼解鎖";
+"applock.action.cancel" = "取消";
+
+/* Notifications */
+"settings.section.notification" = "提醒通知";
+"settings.notification.diary.toggle" = "日記提醒";
+"settings.notification.diary.time" = "提醒時間";
+"settings.notification.growth.toggle" = "量體重提醒";
+"settings.notification.growth.weekday" = "提醒日";
+"settings.notification.growth.time" = "提醒時間";
+"settings.notification.denied" = "請到「設定」App 允許 Grow Diary 傳送通知。";
+"settings.notification.footer" = "提醒僅在本機排程，不會上傳到伺服器。";
+"notification.diary.title" = "今天寫日記了嗎？";
+"notification.diary.body" = "記錄一下寶貝或毛孩今天的可愛瞬間吧。";
+"notification.growth.title" = "該記錄成長數據了";
+"notification.growth.body" = "別忘了更新身高、體重或體重紀錄。";
+
+/* Backup */
+"settings.section.backup" = "備份與還原";
+"settings.backup.export" = "匯出完整備份";
+"settings.backup.import" = "從備份還原";
+"settings.backup.footer" = "備份包含所有檔案、日記、照片與成長數據，可儲存至「檔案」或 iCloud Drive。";
+"backup.error.invalidArchive" = "無法讀取備份檔，請確認檔案完整。";
+"backup.error.unsupportedArchive" = "不支援的壓縮格式。";
+"backup.error.unsupportedVersion" = "備份版本過新，請更新 App 後再試。";
+"backup.error.importFailed" = "無法開啟選取的檔案。";
+"backup.import.mode.title" = "選擇還原方式";
+"backup.import.mode.message" = "合併會保留現有資料並加入新項目；取代會刪除所有現有資料後還原。";
+"backup.import.mode.merge" = "合併";
+"backup.import.mode.replace" = "取代全部";
+"backup.import.result.title" = "還原完成";
+"backup.import.result.empty" = "備份中沒有可匯入的新資料（可能已全部存在）。";
+"backup.import.result.success" = "已匯入 %lld 個檔案、%lld 則日記、%lld 張照片。";
+
+/* Spotlight */
+"settings.section.spotlight" = "Spotlight 搜尋";
+"settings.spotlight.toggle" = "加入系統搜尋";
+"settings.spotlight.footer" = "可在 iPhone 主畫面下拉搜尋日記與檔案。";
+"spotlight.keyword.profile" = "成長檔案";
+
+/* Premium */
+"premium.section.title" = "Premium";
+"premium.upgrade" = "升級 Premium";
+"premium.status.active" = "Premium 已啟用";
+"premium.settings.footer" = "年訂 NT$ 690 或月訂 NT$ 90，7 天免費試用。";
+"premium.paywall.title" = "Grow Diary Premium";
+"premium.paywall.headline" = "完整保存每一段成長";
+"premium.paywall.subheadline" = "解鎖多檔案、iCloud 同步、備份還原與更多功能。";
+"premium.paywall.plan.annual" = "年訂閱";
+"premium.paywall.plan.monthly" = "月訂閱";
+"premium.paywall.perYear" = "／年";
+"premium.paywall.perMonth" = "／月";
+"premium.paywall.bestValue" = "最划算";
+"premium.paywall.savePercent" = "年訂省 %lld%%";
+"premium.paywall.trialBadge" = "7 天免費試用";
+"premium.paywall.startTrial" = "開始 7 天免費試用";
+"premium.paywall.subscribe" = "訂閱 Premium";
+"premium.paywall.restore" = "恢復購買";
+"premium.paywall.legal" = "試用結束後將依所選方案自動續訂。可於試用結束前 24 小時於 App Store 取消。訂閱將自動續訂，除非於目前期間結束前至少 24 小時取消。";
+"premium.feature.profiles.title" = "無限成長檔案";
+"premium.feature.profiles.subtitle" = "記錄多位寶寶或寵物";
+"premium.feature.icloud.title" = "iCloud 同步";
+"premium.feature.icloud.subtitle" = "多裝置自動同步";
+"premium.feature.backup.title" = "備份與還原";
+"premium.feature.backup.subtitle" = "完整匯出，換機無憂";
+"premium.feature.pdf.title" = "PDF 匯出";
+"premium.feature.pdf.subtitle" = "輸出精美成長日記";
+"premium.feature.security.title" = "Face ID 鎖定";
+"premium.feature.security.subtitle" = "保護私密回憶";
+"premium.feature.spotlight.title" = "Spotlight 搜尋";
+"premium.feature.spotlight.subtitle" = "從主畫面快速找到日記";
+"premium.error.productUnavailable" = "目前無法載入訂閱方案，請稍後再試。";
+"premium.error.pending" = "購買待處理中，請稍後確認。";
+"premium.error.noSubscription" = "找不到有效的 Premium 訂閱。";
+"premium.diary.lockedBanner.title" = "還有 %lld 則超過 30 天的日記";
+"premium.diary.lockedBanner.subtitle" = "升級 Premium 即可查看完整回憶";
+"premium.diary.lockedDetail.title" = "這則日記需要 Premium";
+"premium.diary.lockedDetail.message" = "免費版僅能查看最近 30 天的日記。您的資料仍安全保存，升級即可解鎖全部。";
+"premium.feature.diaryHistory.title" = "完整日記歷史";
+"premium.feature.diaryHistory.subtitle" = "查看 30 天以前的所有日記";

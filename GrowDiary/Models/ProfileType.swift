@@ -8,8 +8,8 @@ enum ProfileType: String, Codable, CaseIterable, Identifiable {
 
     var displayName: String {
         switch self {
-        case .baby: "寶寶"
-        case .pet: "寵物"
+        case .baby: L10n.string("profile.type.baby")
+        case .pet: L10n.string("profile.type.pet")
         }
     }
 

@@ -1,0 +1,320 @@
+/* Tabs */
+"tab.profiles" = "Profiles";
+"tab.timeline" = "Timeline";
+"tab.search" = "Search";
+"tab.settings" = "Settings";
+
+/* Common */
+"common.cancel" = "Cancel";
+"common.save" = "Save";
+"common.ok" = "OK";
+"common.error.title" = "Something Went Wrong";
+"common.add" = "Add";
+"common.edit" = "Edit";
+"common.delete" = "Delete";
+"common.done" = "Done";
+"common.close" = "Close";
+"common.optional" = "Optional";
+"common.type" = "Type";
+"common.date" = "Date";
+"common.notes" = "Notes";
+"common.title" = "Title";
+"common.diary" = "Diary";
+"common.milestone" = "Milestone";
+"common.photos" = "Photos";
+"common.tags" = "Tags";
+"app.name" = "Grow Diary";
+
+/* Profile type */
+"profile.type.baby" = "Baby";
+"profile.type.pet" = "Pet";
+
+/* Age */
+"age.format.yearsAndMonths" = "%1$lld yr %2$lld mo";
+"age.format.years" = "%lld yr";
+"age.format.monthsAndDays" = "%1$lld mo %2$lld d";
+"age.format.months" = "%lld mo";
+"age.format.days" = "%lld d";
+
+/* Growth */
+"growth.type.height" = "Height";
+"growth.type.weight" = "Weight";
+"growth.type.headCircumference" = "Head Circumference";
+"unit.cm" = "cm";
+"unit.kg" = "kg";
+"growth.picker.metricType" = "Metric Type";
+"growth.empty.title" = "No %@ records yet";
+"growth.empty.message" = "Add your first record to track growth.";
+"growth.chart.title" = "%@ Trend";
+"growth.chart.axis.date" = "Date";
+"growth.form.section.data" = "Data";
+"growth.field.value" = "Value";
+"growth.title.addMetric" = "Add %@";
+
+/* Profiles */
+"profiles.empty.title" = "No Profiles Yet";
+"profiles.empty.message" = "Create your first baby or pet profile to start your growth diary.";
+"profiles.navigationTitle" = "Profiles";
+"profiles.accessibility.add" = "Add Profile";
+"profiles.stats.diaryCount" = "%lld diaries";
+"profiles.stats.milestoneProgress" = "%1$lld/%2$lld milestones";
+"profile.form.section.basic" = "Basic Info";
+"profile.field.name" = "Name";
+"profile.field.birthDate" = "Birth / Adoption Date";
+"profile.form.section.avatar" = "Avatar";
+"profile.action.choosePhoto" = "Choose Photo";
+"profile.field.notesPlaceholder" = "e.g. breed, nickname story...";
+"profile.title.edit" = "Edit Profile";
+"profile.title.add" = "Add Profile";
+"profile.tab.diary" = "Diary";
+"profile.tab.growth" = "Growth";
+"profile.tab.milestones" = "Milestones";
+"profile.picker.tabs" = "Tabs";
+"profile.action.edit" = "Edit Profile";
+"profile.action.addDiary" = "Add Diary Entry";
+"profile.action.exportPDF" = "Export PDF";
+"profile.action.delete" = "Delete Profile";
+"profile.delete.confirm.title" = "Delete this profile?";
+"profile.delete.confirm.action" = "Delete Profile and All Data";
+"profile.delete.confirm.message" = "This cannot be undone. All diaries, photos, and records will be deleted.";
+"profile.diary.empty.title" = "No Diary Entries";
+"profile.diary.empty.message" = "Capture first smiles, teeth, new tricks, or any memorable moment.";
+"profile.stats.pill" = "%1$@ %2$@";
+
+/* Diary */
+"diary.row.photoCount" = "%lld photos";
+"diary.form.section.content" = "Diary Content";
+"diary.field.contentPlaceholder" = "What happened today?";
+"diary.action.addPhotos" = "Add Photos";
+"diary.title.edit" = "Edit Entry";
+"diary.title.add" = "Add Entry";
+"diary.detail.navigationTitle" = "Diary Entry";
+"diary.delete.confirm.title" = "Delete this diary entry?";
+
+/* Timeline */
+"timeline.empty.title" = "Timeline Is Empty";
+"timeline.empty.message" = "All baby and pet diary entries will appear here in chronological order.";
+"timeline.navigationTitle" = "Timeline";
+
+/* Search */
+"search.empty.initial.title" = "Search Diaries";
+"search.empty.noResults.title" = "No Results";
+"search.empty.initial.message" = "Enter keywords or select tags to filter entries.";
+"search.empty.noResults.message" = "Try different keywords or tags.";
+"search.navigationTitle" = "Search";
+"search.prompt" = "Title, content, profile name…";
+"search.tag.all" = "All Tags";
+"search.tag.filter" = "Tags";
+
+/* Tags */
+"tag.section.title" = "Tags";
+"tag.field.placeholder" = "New tag";
+"tag.action.add" = "Add";
+
+/* Photo */
+"photo.viewer.notFound.title" = "Photo Not Found";
+"photo.viewer.notFound.message" = "This photo may have been removed.";
+"photo.viewer.defaultTitle" = "Photo";
+
+/* Milestones */
+"milestone.loading" = "Loading milestones…";
+"milestone.empty.title" = "No Milestones Yet";
+"milestone.empty.message" = "Add memorable growth moments.";
+"milestone.section.pending" = "Pending";
+"milestone.section.completed" = "Completed";
+"milestone.form.section.title" = "Milestone";
+"milestone.field.completed" = "Completed";
+"milestone.field.setDate" = "Set Date";
+"milestone.field.achievedDate" = "Achieved Date";
+"milestone.action.delete" = "Delete Milestone";
+"milestone.title.edit" = "Edit Milestone";
+"milestone.title.add" = "Add Milestone";
+"milestone.template.baby.smile" = "First smile";
+"milestone.template.baby.roll" = "First roll over";
+"milestone.template.baby.sit" = "First time sitting up";
+"milestone.template.baby.tooth" = "First tooth";
+"milestone.template.baby.crawl" = "First crawl";
+"milestone.template.baby.stand" = "First stand";
+"milestone.template.baby.walk" = "First steps";
+"milestone.template.baby.firstWord" = "First word (mama/dada)";
+"milestone.template.baby.solidFood" = "First solid food";
+"milestone.template.baby.sleepThrough" = "First full-night sleep";
+"milestone.template.pet.home" = "First day home";
+"milestone.template.pet.bath" = "First bath";
+"milestone.template.pet.vaccine" = "Vaccination complete";
+"milestone.template.pet.walk" = "First walk";
+"milestone.template.pet.trick" = "Learned a new trick";
+"milestone.template.pet.friend" = "Made a friend";
+"milestone.template.pet.groom" = "First grooming";
+
+/* Settings */
+"settings.navigationTitle" = "Settings";
+"settings.section.language" = "Language";
+"settings.language.footer" = "The interface updates immediately after switching language.";
+"settings.section.widget" = "Home Screen Widget";
+"settings.widget.toggle" = "Enable Widget";
+"settings.widget.footer" = "The app cannot add widgets to your Home Screen automatically. After removing one, you must add it again manually. When off, existing widgets stop showing growth data.";
+"settings.widget.status.enabled" = "Widget enabled — data updates automatically";
+"settings.widget.status.disabled" = "Widget disabled";
+"settings.widget.addSteps.title" = "Add to Home Screen:";
+"settings.widget.addSteps.body" = "1. Long-press the Home Screen\n2. Tap Add Widget\n3. Search for Grow Diary\n4. Choose a size and add";
+"settings.widget.guideAlert.title" = "Add Widget Manually";
+"settings.widget.guideAlert.message" = "iOS does not let apps place widgets on the Home Screen. Long-press the Home Screen → Add Widget → search for Grow Diary.";
+"settings.section.export" = "Data & Export";
+"settings.export.noProfiles" = "No profiles to export";
+"settings.export.profilePDF" = "Export \"%@\" Diary PDF";
+"settings.sync.notSignedIn" = "Not signed in to iCloud";
+"settings.sync.toggle" = "iCloud Sync";
+"settings.section.sync" = "Sync";
+"settings.sync.footer" = "When enabled, diaries, growth data, and photos sync to your private iCloud across iPhone and iPad. Restart the app after changing this setting.";
+"settings.section.about" = "About Grow Diary";
+"settings.about.version" = "Version";
+"settings.about.versionValue" = "1.0.0";
+"settings.about.stage" = "Stage";
+"settings.about.stageValue" = "Full Architecture";
+"settings.section.features" = "Features";
+"settings.features.footer" = "Tap an item to go to that feature.";
+"settings.feature.diary" = "Diary & Photos";
+"settings.feature.growth" = "Growth Data";
+"settings.feature.growth.emptyMessage" = "Create a profile first to record height, weight, or head circumference.";
+"settings.feature.growth.link" = "Height / Weight / Head Records";
+"settings.feature.milestones" = "Milestones";
+"settings.feature.milestones.emptyMessage" = "Create a profile first to view and manage milestones.";
+"settings.feature.search" = "Tags & Search";
+"settings.feature.exportPDF" = "PDF Export";
+"settings.section.privacy" = "Privacy";
+"settings.privacy.icloudEnabled" = "When iCloud sync is on, diaries and growth data are stored in your private iCloud account. Only you can access them.";
+"settings.privacy.icloudDisabled" = "When iCloud sync is off, all diaries, photos, and growth data stay on this device only.";
+"settings.restartAlert.title" = "Restart Required";
+"settings.restartAlert.message" = "iCloud sync settings saved. Fully quit Grow Diary and reopen for changes to take effect.";
+
+/* Export */
+"export.empty.title" = "Nothing to Export";
+"export.empty.message" = "Create a profile and add diary entries before exporting.";
+"export.profile.diaryCount" = "%lld entries";
+"export.navigationTitle" = "PDF Export";
+"export.pdf.coverTitle" = "%@'s Growth Diary";
+"export.pdf.tagsLine" = "Tags: %@";
+"export.pdf.noEntries" = "No diary entries yet.";
+"export.pdf.filename" = "%@-GrowthDiary.pdf";
+
+/* Sync */
+"sync.status.disabled" = "Off";
+"sync.status.notSignedIn" = "Sign in to iCloud in Settings";
+"sync.status.enabled" = "On — syncing to your private iCloud";
+
+/* Errors */
+"error.photo.encodingFailed" = "Couldn't save the photo. Please try again.";
+"error.photo.cloudUnavailable" = "iCloud is unavailable. Please sign in to iCloud.";
+
+/* Widget */
+"widget.config.displayName" = "Growth Diary";
+"widget.config.description" = "Show profile age and latest photo.";
+"widget.noDiary.message" = "No diary yet — start recording!";
+"widget.empty.title" = "No Profiles";
+"widget.empty.message" = "Open the app and create a baby or pet profile.";
+"widget.disabled.title" = "Widget Disabled";
+"widget.disabled.message" = "Turn on the widget in Grow Diary Settings.";
+"widget.intent.entityType" = "Profile";
+"widget.intent.title" = "Select Profile";
+"widget.intent.description" = "Choose which baby or pet profile to show on the widget.";
+"widget.intent.parameter.profile" = "Profile";
+
+/* Permissions */
+"permission.camera" = "Grow Diary needs camera access so you can take growth photos.";
+"permission.photoLibrary" = "Grow Diary needs photo library access so you can add photos to diary entries.";
+"permission.faceID" = "Grow Diary uses Face ID to protect your diary and photos.";
+
+/* Security */
+"settings.section.security" = "Security";
+"settings.applock.toggle" = "App Lock";
+"settings.applock.unavailable" = "Face ID, Touch ID, or a device passcode is not set up.";
+"settings.applock.faceID" = "Unlock with Face ID";
+"settings.applock.touchID" = "Unlock with Touch ID";
+"settings.applock.passcode" = "Unlock with device passcode";
+"settings.applock.footer" = "Require authentication when returning to the app from the background.";
+"applock.title" = "Grow Diary is Locked";
+"applock.subtitle" = "Authenticate to continue";
+"applock.reason" = "Unlock to view your growth diary";
+"applock.action.faceID" = "Unlock with Face ID";
+"applock.action.touchID" = "Unlock with Touch ID";
+"applock.action.passcode" = "Unlock with Passcode";
+"applock.action.cancel" = "Cancel";
+
+/* Notifications */
+"settings.section.notification" = "Reminders";
+"settings.notification.diary.toggle" = "Diary reminder";
+"settings.notification.diary.time" = "Reminder time";
+"settings.notification.growth.toggle" = "Growth metric reminder";
+"settings.notification.growth.weekday" = "Day";
+"settings.notification.growth.time" = "Reminder time";
+"settings.notification.denied" = "Allow notifications for Grow Diary in the Settings app.";
+"settings.notification.footer" = "Reminders are scheduled locally on your device.";
+"notification.diary.title" = "Time to write today's diary?";
+"notification.diary.body" = "Capture a sweet moment from today.";
+"notification.growth.title" = "Time to log growth data";
+"notification.growth.body" = "Don't forget to update height, weight, or other metrics.";
+
+/* Backup */
+"settings.section.backup" = "Backup & Restore";
+"settings.backup.export" = "Export Full Backup";
+"settings.backup.import" = "Restore from Backup";
+"settings.backup.footer" = "Backup includes all profiles, diary entries, photos, and growth data.";
+"backup.error.invalidArchive" = "Could not read the backup file.";
+"backup.error.unsupportedArchive" = "Unsupported archive format.";
+"backup.error.unsupportedVersion" = "Backup version is too new. Please update the app.";
+"backup.error.importFailed" = "Could not open the selected file.";
+"backup.import.mode.title" = "Restore Mode";
+"backup.import.mode.message" = "Merge keeps existing data and adds new items. Replace deletes all current data first.";
+"backup.import.mode.merge" = "Merge";
+"backup.import.mode.replace" = "Replace All";
+"backup.import.result.title" = "Restore Complete";
+"backup.import.result.empty" = "No new data to import (everything may already exist).";
+"backup.import.result.success" = "Imported %lld profiles, %lld entries, and %lld photos.";
+
+/* Spotlight */
+"settings.section.spotlight" = "Spotlight Search";
+"settings.spotlight.toggle" = "Index in Spotlight";
+"settings.spotlight.footer" = "Search diary entries and profiles from the iPhone Home Screen.";
+"spotlight.keyword.profile" = "profile";
+
+/* Premium */
+"premium.section.title" = "Premium";
+"premium.upgrade" = "Upgrade to Premium";
+"premium.status.active" = "Premium Active";
+"premium.settings.footer" = "NT$ 690/year or NT$ 90/month with a 7-day free trial.";
+"premium.paywall.title" = "Grow Diary Premium";
+"premium.paywall.headline" = "Preserve every growth moment";
+"premium.paywall.subheadline" = "Unlock unlimited profiles, iCloud sync, backup, and more.";
+"premium.paywall.plan.annual" = "Annual";
+"premium.paywall.plan.monthly" = "Monthly";
+"premium.paywall.perYear" = "per year";
+"premium.paywall.perMonth" = "per month";
+"premium.paywall.bestValue" = "Best value";
+"premium.paywall.savePercent" = "Save %lld%% with annual";
+"premium.paywall.trialBadge" = "7-day free trial";
+"premium.paywall.startTrial" = "Start 7-Day Free Trial";
+"premium.paywall.subscribe" = "Subscribe to Premium";
+"premium.paywall.restore" = "Restore Purchases";
+"premium.paywall.legal" = "After the trial, your selected plan renews automatically unless canceled at least 24 hours before the end of the trial period.";
+"premium.feature.profiles.title" = "Unlimited profiles";
+"premium.feature.profiles.subtitle" = "Track multiple babies or pets";
+"premium.feature.icloud.title" = "iCloud sync";
+"premium.feature.icloud.subtitle" = "Keep data in sync across devices";
+"premium.feature.backup.title" = "Backup & restore";
+"premium.feature.backup.subtitle" = "Export everything when switching phones";
+"premium.feature.pdf.title" = "PDF export";
+"premium.feature.pdf.subtitle" = "Share a beautiful growth diary";
+"premium.feature.security.title" = "Face ID lock";
+"premium.feature.security.subtitle" = "Protect private memories";
+"premium.feature.spotlight.title" = "Spotlight search";
+"premium.feature.spotlight.subtitle" = "Find entries from the Home Screen";
+"premium.error.productUnavailable" = "Unable to load subscription plans. Please try again.";
+"premium.error.pending" = "Purchase is pending. Please check again later.";
+"premium.error.noSubscription" = "No active Premium subscription was found.";
+"premium.diary.lockedBanner.title" = "%lld older entries locked";
+"premium.diary.lockedBanner.subtitle" = "Upgrade to Premium to view your full history";
+"premium.diary.lockedDetail.title" = "Premium required";
+"premium.diary.lockedDetail.message" = "Free plan includes the last 30 days of diary entries. Your data is safe—upgrade to unlock everything.";
+"premium.feature.diaryHistory.title" = "Full diary history";
+"premium.feature.diaryHistory.subtitle" = "Access entries older than 30 days";

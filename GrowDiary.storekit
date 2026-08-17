@@ -1,0 +1,122 @@
+{
+  "appPolicies" : {
+    "eula" : "",
+    "policies" : [
+      {
+        "locale" : "zh_Hant",
+        "policyText" : "",
+        "policyURL" : ""
+      }
+    ]
+  },
+  "identifier" : "GrowDiary",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+
+  ],
+  "settings" : {
+    "_failTransactionsEnabled" : false,
+    "_storeKitErrors" : [
+
+    ],
+    "_storeKitErrorsEnabled" : false,
+    "_timeRate" : 0
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "growdiary_premium",
+      "localizations" : [
+        {
+          "description" : "Grow Diary Premium features",
+          "displayName" : "Premium",
+          "locale" : "zh_Hant"
+        }
+      ],
+      "name" : "Premium",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "690",
+          "familyShareable" : true,
+          "groupNumber" : 1,
+          "internalID" : "6677000001",
+          "introductoryOffer" : {
+            "internalID" : "6677000002",
+            "numberOfPeriods" : 1,
+            "paymentMode" : "free",
+            "subscriptionPeriod" : "P1W"
+          },
+          "localizations" : [
+            {
+              "description" : "Unlock unlimited profiles, iCloud sync, backup, and more.",
+              "displayName" : "Premium 年訂閱",
+              "locale" : "zh_Hant"
+            },
+            {
+              "description" : "Unlock unlimited profiles, iCloud sync, backup, and more.",
+              "displayName" : "Premium Annual",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.kao.growdiary.premium.yearly",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "Premium Yearly",
+          "subscriptionGroupID" : "growdiary_premium",
+          "type" : "RecurringSubscription",
+          "winbackOffers" : [
+
+          ]
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "90",
+          "familyShareable" : true,
+          "groupNumber" : 2,
+          "internalID" : "6677000003",
+          "introductoryOffer" : {
+            "internalID" : "6677000004",
+            "numberOfPeriods" : 1,
+            "paymentMode" : "free",
+            "subscriptionPeriod" : "P1W"
+          },
+          "localizations" : [
+            {
+              "description" : "Unlock unlimited profiles, iCloud sync, backup, and more.",
+              "displayName" : "Premium 月訂閱",
+              "locale" : "zh_Hant"
+            },
+            {
+              "description" : "Unlock unlimited profiles, iCloud sync, backup, and more.",
+              "displayName" : "Premium Monthly",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.kao.growdiary.premium.monthly",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Premium Monthly",
+          "subscriptionGroupID" : "growdiary_premium",
+          "type" : "RecurringSubscription",
+          "winbackOffers" : [
+
+          ]
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 4,
+    "minor" : 0
+  }
+}

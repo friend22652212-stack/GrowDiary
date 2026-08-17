@@ -1,43 +1,59 @@
-import PhotosUI
 import SwiftData
 import SwiftUI
 
 struct ProfilesListView: View {
-    @Environment(\.modelContext) private var modelContext
+    @EnvironmentObject private var subscriptionManager: SubscriptionManager
     @Query(sort: \Profile.createdAt, order: .reverse) private var profiles: [Profile]
 
     @State private var showingAddProfile = false
 
     var body: some View {
         NavigationStack {
-            Group {
-                if profiles.isEmpty {
-                    EmptyStateView(
-                        systemImage: "person.crop.circle.badge.plus",
-                        title: "還沒有檔案",
-                        message: "建立第一個寶寶或寵物檔案，開始記錄成長日記。"
-                    )
-                } else {
-                    List(profiles) { profile in
-                        NavigationLink(value: profile) {
-                            ProfileRowView(profile: profile)
+            ZStack {
+                ScreenBackground()
+
+                Group {
+                    if profiles.isEmpty {
+                        EmptyStateView(
+                            systemImage: "person.crop.circle.badge.plus",
+                            title: L10n.string("profiles.empty.title"),
+                            message: L10n.string("profiles.empty.message")
+                        )
+                    } else {
+                        ScrollView {
+                            LazyVStack(spacing: 14) {
+                                ForEach(profiles) { profile in
+                                    NavigationLink(value: profile) {
+                                        ProfileRowView(profile: profile)
+                                    }
+                                    .buttonStyle(.plain)
+                                }
+                            }
+                            .padding(.horizontal)
+                            .padding(.vertical, 8)
                         }
                     }
-                    .listStyle(.insetGrouped)
                 }
             }
-            .navigationTitle("成長檔案")
+            .navigationTitle(L10n.string("profiles.navigationTitle"))
             .navigationDestination(for: Profile.self) { profile in
                 ProfileDetailView(profile: profile)
             }
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        showingAddProfile = true
+                        if subscriptionManager.canAddProfile(currentCount: profiles.count) {
+                            showingAddProfile = true
+                        } else {
+                            subscriptionManager.showingPaywall = true
+                        }
                     } label: {
-                        Image(systemName: "plus")
+                        Image(systemName: "plus.circle.fill")
+                            .font(.title3)
+                            .symbolRenderingMode(.palette)
+                            .foregroundStyle(.white, AppTheme.babyPrimary)
                     }
-                    .accessibilityLabel("新增檔案")
+                    .accessibilityLabel(L10n.string("profiles.accessibility.add"))
                 }
             }
             .sheet(isPresented: $showingAddProfile) {
@@ -51,35 +67,47 @@ struct ProfileRowView: View {
     let profile: Profile
 
     var body: some View {
-        HStack(spacing: 14) {
-            ProfileAvatarView(profile: profile)
+        HStack(spacing: 16) {
+            ProfileAvatarView(profile: profile, size: 64)
 
-            VStack(alignment: .leading, spacing: 4) {
-                HStack {
+            VStack(alignment: .leading, spacing: 8) {
+                HStack(spacing: 8) {
                     Text(profile.name)
                         .font(.headline)
-                    Text(profile.type.displayName)
-                        .font(.caption)
-                        .padding(.horizontal, 8)
-                        .padding(.vertical, 2)
-                        .background(AppTheme.tint(for: profile.type).opacity(0.35))
-                        .clipShape(Capsule())
+                        .foregroundStyle(.primary)
+                    ProfileTypeBadge(type: profile.type)
                 }
 
                 Text(profile.ageDescription)
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
 
-                Text("\(profile.entries.count) 則日記")
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
+                HStack(spacing: 12) {
+                    Label(L10n.format("profiles.stats.diaryCount", profile.entries.count), systemImage: "book.fill")
+                    Label(L10n.format("profiles.stats.milestoneProgress", profile.completedMilestoneCount, profile.milestones.count), systemImage: "flag.fill")
+                }
+                .font(.caption)
+                .foregroundStyle(AppTheme.tint(for: profile.type))
             }
+
+            Spacer(minLength: 0)
+
+            Image(systemName: "chevron.right")
+                .font(.caption.weight(.semibold))
+                .foregroundStyle(.tertiary)
         }
-        .padding(.vertical, 4)
+        .cardStyle()
+        .overlay(alignment: .leading) {
+            RoundedRectangle(cornerRadius: AppTheme.cornerRadius, style: .continuous)
+                .fill(AppTheme.tint(for: profile.type))
+                .frame(width: 4)
+                .padding(.vertical, 8)
+        }
     }
 }
 
 #Preview {
     ProfilesListView()
         .modelContainer(for: [Profile.self, DiaryEntry.self, PhotoAttachment.self], inMemory: true)
+        .environmentObject(SubscriptionManager.shared)
 }

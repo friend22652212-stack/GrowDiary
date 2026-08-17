@@ -21,41 +21,47 @@ struct AddEditProfileView: View {
     var body: some View {
         NavigationStack {
             Form {
-                Section("基本資料") {
-                    TextField("名稱", text: $name)
+                Section {
+                    TextField(L10n.string("profile.field.name"), text: $name)
 
-                    Picker("類型", selection: $type) {
+                    Picker(L10n.string("common.type"), selection: $type) {
                         ForEach(ProfileType.allCases) { profileType in
                             Label(profileType.displayName, systemImage: profileType.systemImage)
                                 .tag(profileType)
                         }
                     }
 
-                    DatePicker("出生／到家日期", selection: $birthDate, displayedComponents: .date)
+                    DatePicker(L10n.string("profile.field.birthDate"), selection: $birthDate, displayedComponents: .date)
+                } header: {
+                    Text(L10n.string("profile.form.section.basic"))
                 }
 
-                Section("大頭照") {
+                Section {
                     HStack {
                         avatarPreview
                         PhotosPicker(selection: $selectedPhoto, matching: .images) {
-                            Label("選擇照片", systemImage: "photo.on.rectangle")
+                            Label(L10n.string("profile.action.choosePhoto"), systemImage: "photo.on.rectangle")
                         }
                     }
+                } header: {
+                    Text(L10n.string("profile.form.section.avatar"))
                 }
 
-                Section("備註") {
-                    TextField("例如：品種、暱稱由來...", text: $notes, axis: .vertical)
+                Section {
+                    TextField(L10n.string("profile.field.notesPlaceholder"), text: $notes, axis: .vertical)
                         .lineLimit(3...6)
+                } header: {
+                    Text(L10n.string("common.notes"))
                 }
             }
-            .navigationTitle(isEditing ? "編輯檔案" : "新增檔案")
+            .navigationTitle(L10n.string(isEditing ? "profile.title.edit" : "profile.title.add"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("取消") { dismiss() }
+                    Button(L10n.string("common.cancel")) { dismiss() }
                 }
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("儲存") { save() }
+                    Button(L10n.string("common.save")) { save() }
                         .disabled(name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
                 }
             }
@@ -63,11 +69,11 @@ struct AddEditProfileView: View {
             .onChange(of: selectedPhoto) { _, newValue in
                 Task { await loadSelectedPhoto(from: newValue) }
             }
-            .alert("發生錯誤", isPresented: Binding(
+            .alert(L10n.string("common.error.title"), isPresented: Binding(
                 get: { errorMessage != nil },
                 set: { if !$0 { errorMessage = nil } }
             )) {
-                Button("好") {}
+                Button(L10n.string("common.ok")) {}
             } message: {
                 Text(errorMessage ?? "")
             }
@@ -134,6 +140,7 @@ struct AddEditProfileView: View {
                 if let avatarPath {
                     profile.avatarPhotoPath = avatarPath
                 }
+                SpotlightIndexingService.indexProfile(profile)
             } else {
                 let newProfile = Profile(
                     name: trimmedName,
@@ -143,6 +150,7 @@ struct AddEditProfileView: View {
                     avatarPhotoPath: avatarPath
                 )
                 modelContext.insert(newProfile)
+                SpotlightIndexingService.indexProfile(newProfile)
             }
 
             dismiss()

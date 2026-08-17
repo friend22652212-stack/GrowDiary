@@ -5,6 +5,7 @@ import SwiftUI
 struct AddEditDiaryEntryView: View {
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
+    @EnvironmentObject private var subscriptionManager: SubscriptionManager
 
     var profile: Profile
     var entry: DiaryEntry?
@@ -14,6 +15,7 @@ struct AddEditDiaryEntryView: View {
     @State private var date = Date()
     @State private var selectedPhotos: [PhotosPickerItem] = []
     @State private var pendingImages: [UIImage] = []
+    @State private var selectedTags: [DiaryTag] = []
     @State private var errorMessage: String?
 
     private var isEditing: Bool { entry != nil }
@@ -21,20 +23,24 @@ struct AddEditDiaryEntryView: View {
     var body: some View {
         NavigationStack {
             Form {
-                Section("日記內容") {
-                    TextField("標題", text: $title)
-                    DatePicker("日期", selection: $date, displayedComponents: [.date, .hourAndMinute])
-                    TextField("今天發生了什麼？", text: $content, axis: .vertical)
+                Section {
+                    TextField(L10n.string("common.title"), text: $title)
+                    DatePicker(L10n.string("common.date"), selection: $date, displayedComponents: [.date, .hourAndMinute])
+                    TextField(L10n.string("diary.field.contentPlaceholder"), text: $content, axis: .vertical)
                         .lineLimit(4...10)
+                } header: {
+                    Text(L10n.string("diary.form.section.content"))
                 }
 
-                Section("照片") {
+                TagPickerSection(selectedTags: $selectedTags)
+
+                Section {
                     PhotosPicker(
                         selection: $selectedPhotos,
                         maxSelectionCount: 12,
                         matching: .images
                     ) {
-                        Label("加入照片", systemImage: "photo.badge.plus")
+                        Label(L10n.string("diary.action.addPhotos"), systemImage: "photo.badge.plus")
                     }
 
                     if !pendingImages.isEmpty {
@@ -61,16 +67,18 @@ struct AddEditDiaryEntryView: View {
                             .padding(.vertical, 4)
                         }
                     }
+                } header: {
+                    Text(L10n.string("common.photos"))
                 }
             }
-            .navigationTitle(isEditing ? "編輯日記" : "新增日記")
+            .navigationTitle(L10n.string(isEditing ? "diary.title.edit" : "diary.title.add"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("取消") { dismiss() }
+                    Button(L10n.string("common.cancel")) { dismiss() }
                 }
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("儲存") { save() }
+                    Button(L10n.string("common.save")) { save() }
                         .disabled(title.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
                 }
             }
@@ -78,11 +86,11 @@ struct AddEditDiaryEntryView: View {
             .onChange(of: selectedPhotos) { _, newItems in
                 Task { await loadSelectedPhotos(from: newItems) }
             }
-            .alert("發生錯誤", isPresented: Binding(
+            .alert(L10n.string("common.error.title"), isPresented: Binding(
                 get: { errorMessage != nil },
                 set: { if !$0 { errorMessage = nil } }
             )) {
-                Button("好") {}
+                Button(L10n.string("common.ok")) {}
             } message: {
                 Text(errorMessage ?? "")
             }
@@ -98,6 +106,7 @@ struct AddEditDiaryEntryView: View {
         pendingImages = entry.sortedPhotos.compactMap {
             PhotoStorageService.loadImage(fileName: $0.fileName)
         }
+        selectedTags = entry.tags
     }
 
     private func loadSelectedPhotos(from items: [PhotosPickerItem]) async {
@@ -119,6 +128,11 @@ struct AddEditDiaryEntryView: View {
         let trimmedTitle = title.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !trimmedTitle.isEmpty else { return }
 
+        guard PremiumAccess.isDiaryDateAccessible(date, isPremium: subscriptionManager.isPremium) else {
+            subscriptionManager.showingPaywall = true
+            return
+        }
+
         do {
             let targetEntry: DiaryEntry
 
@@ -127,6 +141,7 @@ struct AddEditDiaryEntryView: View {
                 targetEntry.title = trimmedTitle
                 targetEntry.content = content
                 targetEntry.date = date
+                targetEntry.tags = selectedTags
 
                 for photo in entry.photos {
                     PhotoStorageService.deleteImage(fileName: photo.fileName)
@@ -134,6 +149,7 @@ struct AddEditDiaryEntryView: View {
                 entry.photos.removeAll()
             } else {
                 let newEntry = DiaryEntry(title: trimmedTitle, content: content, date: date, profile: profile)
+                newEntry.tags = selectedTags
                 modelContext.insert(newEntry)
                 profile.entries.append(newEntry)
                 targetEntry = newEntry
@@ -146,6 +162,7 @@ struct AddEditDiaryEntryView: View {
                 targetEntry.photos.append(attachment)
             }
 
+            SpotlightIndexingService.indexEntry(targetEntry)
             dismiss()
         } catch {
             errorMessage = error.localizedDescription
